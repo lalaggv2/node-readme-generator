@@ -1,0 +1,18 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "This is README generator, that will ask you basic questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "readme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "lalaggv2"
+  },
+  "keywords": [
+    "readme"
+  ],
+  "author": "LalaGG",
+  "license": "MIT"
+}
