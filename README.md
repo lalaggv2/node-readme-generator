@@ -14,3 +14,59 @@ Title | Name of your repo |
 | Questions | Who does one contact for questions about the repo, and how?
 
 It would also generate a badge (that can be personalized by the user) specific to this repository.
+
+#### node-readme-generator
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lalaggv2/node-readme-generator)
+
+### Email Address
+
+null
+
+### Description
+
+It's an utility that will ask questions and will generate a readme based on the answers
+
+### Table of Contents
+
+- Installation
+
+- Usage
+
+- License
+
+- Contributing
+
+- Tests
+
+- Questions
+
+### Installation
+
+To install necessary dependencies, run the following command:
+
+npm install
+
+### Usage
+
+It doesn't work as of now. I didn't have time and didn't know how to do it
+
+### License
+
+This project is licensed under the MIT license.
+
+### Contributing
+
+Please email me first
+
+### Tests
+
+To run tests, run the following command:
+
+npm run test
+
+### Questions
+
+<img src="https://avatars0.githubusercontent.com/u/6589798?v=4" alt="github avatar"/>
+
+For questions or additional information contact [lalaggv2](https://api.github.com/users/lalaggv2) directly at null.

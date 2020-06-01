@@ -6,7 +6,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 const questions = [
-  /* this is an array of questions
+  /* this is an array of questions as objects
   Title [string]
 whats Description (string)
 whats theTable of Contents [array: string] or object
@@ -19,9 +19,6 @@ Questions
   user github profile picture [string] (image url)
   user github email (string)
 ]*/
-
-inquirer
-  .prompt([
     {
     type: "input",
     message: "What's your GitHub username?",
@@ -56,6 +53,7 @@ inquirer
     type: "input",
     message: "What licenses does this repository have?",
     name: "license",
+    choices: ["MIT", "APACHE 2.0", "GPL 3.0" , "NONE"]
   },
   {
     type: "input",
@@ -72,21 +70,17 @@ inquirer
     message: "Who and how to ask questions about this repository?",
     name: "questions",
   }
-]).then(function ({ questions }) {
-    // const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
-    // axios.get(queryUrl).then((response) => {
-    //   const repoNames = response.data.map((repo) => {
-    //     return repo.name;
+]
+inquirer.prompt(questions).then(function(data){
 
-   
-
-      fs.writeFile("readme.md", , (err) => {
-        if (err) {
-          throw err;
-        }
-        console.log("ReadMe done! Congratulations");
-      });
-    });
+  fs.writeFile("readme.md", data, (err) => {
+    if (err) {
+      throw err;
+    }
+    console.log("ReadMe done! Congratulations");
   });
+});
+
+
  
   [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
