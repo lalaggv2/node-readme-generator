@@ -37,7 +37,7 @@ Questions
   },
   {
     type: "input",
-    message,: "links",
+    message: "links",
     name: "Table of Contents"
   },
   { 
