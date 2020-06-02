@@ -4,6 +4,7 @@
 const fs = require("fs");
 //const axios = require("axios");
 const inquirer = require("inquirer");
+const api = require("./develop/utils/api")
 
 const questions = [
   /* this is an array of questions as objects
