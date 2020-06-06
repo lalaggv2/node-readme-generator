@@ -2,8 +2,10 @@
 /*The user will be prompter for their GitHub username and other ifnormations of the project the README is for.*/
 
 const fs = require("fs");
-//const axios = require("axios");
+const axios = require("axios");
 const inquirer = require("inquirer");
+const path = require("path");
+const generateMarkdown = require(./utils)
 
 const questions = [
   /* this is an array of questions as objects
