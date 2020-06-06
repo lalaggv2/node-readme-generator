@@ -4,8 +4,12 @@
 const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
-const path = require("path");
-const generateMarkdown = require(./utils)
+
+=======
+const api = require("./develop/utils/api");
+const path = require ('path');
+const generateMarkdown = require("./Develop/utils/generateMarkdown")
+>>>>>>> 8f10de10348f85c232f799a9f8ac20528157eebe
 
 const questions = [
   /* this is an array of questions as objects
@@ -38,7 +42,7 @@ Questions
   },
   {
     type: "input",
-    message,: "links",
+    message: "links",
     name: "Table of Contents"
   },
   { 
@@ -85,4 +89,4 @@ inquirer.prompt(questions).then(function(data){
 
 
  
-  [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+//(https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
