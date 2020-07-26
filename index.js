@@ -91,7 +91,7 @@ function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-function init() {
+function initial() {
   //build out intialize
   inquirer.prompt(questions).then((inquirerResponses) => {
     console.log("searching...");
@@ -104,6 +104,6 @@ function init() {
   })
 }
 
-init();
+initial();
 
 //(https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
