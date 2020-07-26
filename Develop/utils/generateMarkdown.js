@@ -1,3 +1,26 @@
+function generateProjectUrl(github, title) {
+  const projectTitle = title.toLowerCase().split(" ").join("-");
+  return `https://github.com/${github}/${projectTitle}`;
+}
+
+function renderLicenseBadge(license, github, title) {
+  if (license !== "None") {
+    return `[![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)](${generateProjectUrl(github, title)})`
+  }
+  return ''
+}
+
+function renderLicenseSection(license) {
+  if (license !== "None") {
+    return (
+      `### License ###
+
+This project is licensed under the ${license} license.`
+    )
+  }
+  return ''
+}
+
 function generateMarkdown(data) {
   return `
 #### ${data.title} ####
@@ -54,30 +77,4 @@ ${data.test}
 For questions or additional information contact [${data.github}](${data.url}) directly at ${data.email}.`;
 }
 
-module.exports = generateMarkdown;
-
-
-`;
-}
-
-function generateProjectUrl(github, title) {
-  const projectTitle = title.toLowerCase().split(" ").join("-");
-  return `https://github.com/${github}/${projectTitle}`;
-function renderLicenseBadge(license, github, title) {
-  if (license !== "None") {
-    return `[![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)](${generateProjectUrl(github, title)})`
-  }
-  return ''
-}
-
-function renderLicenseSection(license) {
-  if (license !== "None") {
-    return (
-      `### License ###
-
-This project is licensed under the ${license} license.`
-    )
-  }
-  return ''
-}
 module.exports = generateMarkdown;

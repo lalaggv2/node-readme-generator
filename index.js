@@ -58,7 +58,7 @@ Questions
     type: "input",
     message: "What licenses does this repository have?",
     name: "license",
-    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "NONE"]
+    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "OTHER", "NONE"]
   },
   {
     type: "input",
@@ -86,6 +86,24 @@ inquirer.prompt(questions).then(function (data) {
   });
 });
 
+function writeToFile(fileName, data) {
+  //setup writefile
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
+function init() {
+  //build out intialize
+  inquirer.prompt(questions).then((inquirerResponses) => {
+    console.log("searching...");
+
+    api
+      .getUser(inquirerResponses.github)
+      .then(({ data }) => {
+        writeToFile("README.md", generateMarkdown({ ...inquirerResponses, ...data }));
+      })
+  })
+}
+
+init();
 
 //(https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)

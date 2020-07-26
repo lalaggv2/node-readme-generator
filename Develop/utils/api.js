@@ -12,7 +12,6 @@ const api = {
         console.log("User Not Found")
         process.exit(1);
       });
-
   }
 };
 
