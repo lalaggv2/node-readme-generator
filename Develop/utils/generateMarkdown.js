@@ -26,10 +26,6 @@ function generateMarkdown(data) {
 #### ${data.title} ####
 ${renderLicenseBadge(data.license, data.github, data.title)}
 
-### Email Address ###
-
-${data.email}
-
 ### Description ###
 
 ${data.description}
@@ -68,13 +64,13 @@ ${data.contributing}
 
 To run tests, run the following command:
 
-${data.test}
+${data.tests}
 
 ### Questions ###
 
-<img src="${data.avatar_url}" alt="github avatar"/>
+<img src="${data.avatar_url}" alt="github avatar" width=200px/>
 
-For questions or additional information contact [${data.github}](${data.url}) directly at ${data.email}.`;
+For questions or additional information contact [${data.github}](${data.url}) at luangu2020@gmail.com`;
 }
 
 module.exports = generateMarkdown;

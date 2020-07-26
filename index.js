@@ -27,7 +27,12 @@ Questions
   {
     type: "input",
     message: "What's your GitHub username?",
-    name: "username",
+    name: "github",
+  },
+  {
+    type: "input",
+    message: "What's your email address?",
+    name: "email"
   },
   {
     type: "input",
@@ -41,11 +46,6 @@ Questions
   },
   {
     type: "input",
-    message: "links",
-    name: "Table of Contents"
-  },
-  {
-    type: "input",
     message: "Instructions for Installation",
     name: "instructions",
   },
@@ -55,8 +55,8 @@ Questions
     name: "usage",
   },
   {
-    type: "input",
-    message: "What licenses does this repository have?",
+    type: "list",
+    message: "What kind of license do you want for your repository?",
     name: "license",
     choices: ["MIT", "APACHE 2.0", "GPL 3.0", "OTHER", "NONE"]
   },
@@ -69,32 +69,27 @@ Questions
     type: "input",
     message: "How do you run test on this repository?",
     name: "tests",
-  },
-  {
-    type: "input",
-    message: "Who and how to ask questions about this repository?",
-    name: "questions",
   }
 ]
-inquirer.prompt(questions).then(function (data) {
+// inquirer.prompt(questions).then(function (data) {
 
-  fs.writeFile("readme.md", data, (err) => {
-    if (err) {
-      throw err;
-    }
-    console.log("ReadMe done! Congratulations");
-  });
-});
+//   fs.writeFile("readme.md", data, (err) => {
+//     if (err) {
+//       throw err;
+//     }
+//     console.log("ReadMe done! Congratulations");
+//   });
+// });
 
 function writeToFile(fileName, data) {
   //setup writefile
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-function initial() {
+function runQuestions() {
   //build out intialize
   inquirer.prompt(questions).then((inquirerResponses) => {
-    console.log("searching...");
+    console.log("Generating your README...");
 
     api
       .getUser(inquirerResponses.github)
@@ -104,6 +99,6 @@ function initial() {
   })
 }
 
-initial();
+runQuestions();
 
 //(https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
