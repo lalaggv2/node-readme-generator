@@ -1,10 +1,10 @@
 
-#### kfksflke ####
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lalaggv2/kfksflke)
+#### Node Readme Generator ####
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lalaggv2/node-readme-generator)
 
 ### Description ###
 
-wrjlw3ejr3j
+Automatize the generation of the readme for your repositories
 
 ### Table of Contents ###
 
@@ -20,8 +20,6 @@ wrjlw3ejr3j
 
 * Questions
 
-null
-
 ### Installation ###
 
 To install necessary dependencies, run the following command:
@@ -30,7 +28,7 @@ undefined
 
 ### Usage ###
 
-lksfjlsf
+Everyone that uses GitHub
 
 ### License ###
 
@@ -38,13 +36,13 @@ This project is licensed under the MIT license.
   
 ### Contributing ###
 
-fjlsjflks
+lalaggv2
 
 ### Tests ###
 
 To run tests, run the following command:
 
-wrr
+npm run test
 
 ### Questions ###
 
